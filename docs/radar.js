@@ -247,7 +247,7 @@ function radar_visualization(config) {
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
         .style("fill", "#6272a4")
-        .style("font-family", "Lota Grotesque, Arial")
+        .style("font-family", "Darker Grotesque, sans-serif")
         .style("font-size", 20)
         .style("pointer-events", "none")
         .style("user-select", "none");
@@ -273,7 +273,7 @@ function radar_visualization(config) {
     radar.append("text")
       .attr("transform", translate(title_offset.x, title_offset.y))
       .text(config.title)
-      .style("font-family", "Lota Grotesque, Arial")
+      .style("font-family", "Darker Grotesque, sans-serif")
       .style("font-size", "34")
       .style("fill", "#f8f8f2");
 
@@ -282,7 +282,7 @@ function radar_visualization(config) {
       .attr("transform", translate(footer_offset.x, footer_offset.y))
       .text("▲ moved up     ▼ moved down")
       .attr("xml:space", "preserve")
-      .style("font-family", "Lota Grotesque, Arial")
+      .style("font-family", "Darker Grotesque, sans-serif")
       .style("fill", "#f8f8f2")
       .style("font-size", "10");
 
@@ -295,14 +295,14 @@ function radar_visualization(config) {
           legend_offset[quadrant].y - 45
         ))
         .text(config.quadrants[quadrant].name)
-        .style("font-family", "Lota Grotesque, Arial")
+        .style("font-family", "Darker Grotesque, sans-serif")
         .style("font-size", "26")
         .style("fill", "#f8f8f2");
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
           .text(config.rings[ring].name)
-          .style("font-family", "Lota Grotesque, Arial")
+          .style("font-family", "Darker Grotesque, sans-serif")
           .style("font-size", "14")
           .style("font-weight", "bold")
           .style("fill", "#f8f8f2");
@@ -315,7 +315,7 @@ function radar_visualization(config) {
               .attr("class", "legend" + quadrant + ring)
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return d.id + ". " + d.label; })
-              .style("font-family", "Lota Grotesque, Arial")
+              .style("font-family", "Darker Grotesque, sans-serif")
               .style("font-size", "10")
               .style("fill", "#f8f8f2")
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
@@ -341,7 +341,7 @@ function radar_visualization(config) {
     .attr("ry", 4)
     .style("fill", "#333");
   bubble.append("text")
-    .style("font-family", "sans-serif")
+    .style("font-family", "Darker Grotesque, sans-serif")
     .style("font-size", "10px")
     .style("fill", "#fff");
   bubble.append("path")
@@ -427,7 +427,7 @@ function radar_visualization(config) {
         .attr("y", 3)
         .attr("text-anchor", "middle")
         .style("fill", "#000")
-        .style("font-family", "Lota Grotesque, Arial")
+        .style("font-family", "Darker Grotesque, sans-serif")
         .style("font-size", function(d) { return blip_text.length > 2 ? "9" : "10"; })
         .style("pointer-events", "none")
         .style("user-select", "none");
