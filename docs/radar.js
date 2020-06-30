@@ -48,10 +48,10 @@ function radar_visualization(config) {
   ];
 
   const rings = [
-    { radius: 130 },
+    { radius: 120 },
     { radius: 220 },
-    { radius: 310 },
-    { radius: 400 }
+    { radius: 320 },
+    { radius: 420 }
   ];
 
   const title_offset =
@@ -193,6 +193,7 @@ function radar_visualization(config) {
 
   var svg = d3.select("svg#" + config.svg_id)
     .style("background-color", config.colors.background)
+    .style("color", "#f8f8f2")
     .attr("width", config.width)
     .attr("height", config.height);
 
@@ -245,10 +246,9 @@ function radar_visualization(config) {
         .text(config.rings[i].name)
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
-        .style("fill", "#e5e5e5")
-        .style("font-family", "Arial, Helvetica")
-        .style("font-size", 42)
-        .style("font-weight", "bold")
+        .style("fill", "#6272a4")
+        .style("font-family", "Lota Grotesque, Arial")
+        .style("font-size", 20)
         .style("pointer-events", "none")
         .style("user-select", "none");
     }
@@ -273,15 +273,17 @@ function radar_visualization(config) {
     radar.append("text")
       .attr("transform", translate(title_offset.x, title_offset.y))
       .text(config.title)
-      .style("font-family", "Arial, Helvetica")
-      .style("font-size", "34");
+      .style("font-family", "Lota Grotesque, Arial")
+      .style("font-size", "34")
+      .style("fill", "#f8f8f2");
 
     // footer
     radar.append("text")
       .attr("transform", translate(footer_offset.x, footer_offset.y))
       .text("▲ moved up     ▼ moved down")
       .attr("xml:space", "preserve")
-      .style("font-family", "Arial, Helvetica")
+      .style("font-family", "Lota Grotesque, Arial")
+      .style("fill", "#f8f8f2")
       .style("font-size", "10");
 
     // legend
@@ -293,15 +295,18 @@ function radar_visualization(config) {
           legend_offset[quadrant].y - 45
         ))
         .text(config.quadrants[quadrant].name)
-        .style("font-family", "Arial, Helvetica")
-        .style("font-size", "18");
+        .style("font-family", "Lota Grotesque, Arial")
+        .style("font-size", "26")
+        .style("fill", "#f8f8f2");
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
           .text(config.rings[ring].name)
-          .style("font-family", "Arial, Helvetica")
-          .style("font-size", "12")
-          .style("font-weight", "bold");
+          .style("font-family", "Lota Grotesque, Arial")
+          .style("font-size", "14")
+          .style("font-weight", "bold")
+          .style("fill", "#f8f8f2");
+;
         legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
           .enter()
@@ -310,8 +315,9 @@ function radar_visualization(config) {
               .attr("class", "legend" + quadrant + ring)
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return d.id + ". " + d.label; })
-              .style("font-family", "Arial, Helvetica")
-              .style("font-size", "11")
+              .style("font-family", "Lota Grotesque, Arial")
+              .style("font-size", "10")
+              .style("fill", "#f8f8f2")
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
               .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); });
       }
@@ -420,9 +426,9 @@ function radar_visualization(config) {
         .text(blip_text)
         .attr("y", 3)
         .attr("text-anchor", "middle")
-        .style("fill", "#fff")
-        .style("font-family", "Arial, Helvetica")
-        .style("font-size", function(d) { return blip_text.length > 2 ? "8" : "9"; })
+        .style("fill", "#000")
+        .style("font-family", "Lota Grotesque, Arial")
+        .style("font-size", function(d) { return blip_text.length > 2 ? "9" : "10"; })
         .style("pointer-events", "none")
         .style("user-select", "none");
     }
