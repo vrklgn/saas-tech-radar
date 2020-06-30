@@ -13,7 +13,7 @@ This fork aims to create a framework for how to describe and talk about SaaS app
 It's an forever growing market - being able to visualise internally and publically how you think regarding 
 SaaS applications could be an interesting way to see where you are heading and where you want to be.
 
-## Concepts
+## Changed Concepts
 
 ### Rings
 
@@ -28,10 +28,10 @@ SaaS applications could be an interesting way to see where you are heading and w
 
 | Original | Replacement | Description
 | --- | --- | --- |
-| Techniques | Compliance | Tools fulfilling a ISO-certification or managing of platforms. "How do we ensure that our work is Secure?" |
-| Platforms | Platforms | Operating Systems or "Platforms" where software can be run. - "On what do we work?"|
-| Tools | Collaboration | Tools used to collaborate, most software will sit under this category. - "Where do we work with each other?"|
-| Languages & Frameworks | Communication | Tools used for communication between employees / customers - "How do we communicate with each other?" |
+| Techniques | Compliance | Tools fulfilling a ISO-certification or managing of platforms. \\ "How do we ensure that our work is Secure?" |
+| Platforms | Platforms | Operating Systems or "Platforms" where software can be run. \\ "On what do we work?"|
+| Tools | Collaboration | Tools used to collaborate, most software will sit under this category. \\ "Where do we work with each other?"|
+| Languages & Frameworks | Communication | Tools used for communication between employees / customers \\ "How do we communicate with each other?" |
 
 ## Usage
 
