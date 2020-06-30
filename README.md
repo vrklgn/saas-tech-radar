@@ -13,6 +13,10 @@ This fork aims to create a framework for how to describe and talk about SaaS app
 It's an forever growing market - being able to visualise internally and publically how you think regarding 
 SaaS applications could be an interesting way to see where you are heading and where you want to be.
 
+# Example Radar
+
+![https://i.imgur.com/XuQ7wkv.png]
+
 ## Changed Concepts
 
 ### Rings
