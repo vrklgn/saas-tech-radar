@@ -1,15 +1,45 @@
-# Motivation
+# Background
 
-At [Zalando](http://zalando.de), we maintain a [public Tech
-Radar](http://zalando.github.io/tech-radar/) to help our engineering teams
+[Zalando](http://zalando.de), maintains a [public Tech
+Radar](http://zalando.github.io/tech-radar/) to help their engineering teams
 align on technology choices. It is based on the [pioneering work
 by ThoughtWorks](https://www.thoughtworks.com/radar).
+
+An thought I (vrklgn) had for some time is how this tech-radar could be used to also visualise
+internal work with SaaS applications and other productivity apps.
+
+This fork aims to create a framework for how to describe and talk about SaaS applications internally.
+
+It's an forever growing market - being able to visualise internally and publically how you think regarding 
+SaaS applications could be an interesting way to see where you are heading and where you want to be.
+
+## Concepts
+
+### Rings
+
+| Original | Replacement | Description
+| --- | --- | --- |
+| Adopt | Invest | Where we want to put development / research to make the environment even better (User Education, Initatives, New ways of working etc. |
+| Trial | Support | Tools that are part of the software stack that we support. |
+| Hold | Obsolete | Tools we want to move away from. |
+| Assess | Unsupported | Tool we have moved away from or decided against. |
+
+### Quadrants
+
+| Original | Replacement | Description
+| --- | --- | --- |
+| Techniques | Compliance | Tools fulfilling a ISO-certification or managing of platforms. "How do we ensure that our work is Secure?" |
+| Platforms | Platforms | Operating Systems or "Platforms" where software can be run. - "On what do we work?"|
+| Tools | Collaboration | Tools used to collaborate, most software will sit under this category. - "Where do we work with each other?"|
+| Languages & Frameworks | Communication | Tools used for communication between employees / customers - "How do we communicate with each other?" |
+
+## Usage
+
+### zalando/tech-radar
 
 This repository contains the code to generate the visualization:
 [`radar.js`](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
 Feel free to use and adapt it for your own purposes.
-
-## Usage
 
 1. include `d3.js` and `radar.js`:
 
@@ -66,10 +96,7 @@ radar_visualization({
 
 Entries are positioned automatically so that they don't overlap.
 
-As a working example, you can check out `docs/index.html` &mdash; the source of our [public Tech
-Radar](http://zalando.github.io/tech-radar/).
-
-## Local Development
+### Local Development
 
 1. install dependencies with yarn (or npm):
 
@@ -92,6 +119,11 @@ http://localhost:3000/
 ## License
 
 ```
+vrkgn/tech-radar
+Modifications under same license as origin.
+
+
+zalando/tech-radar
 The MIT License (MIT)
 
 Copyright (c) 2017 Zalando SE
