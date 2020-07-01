@@ -14,7 +14,7 @@ It's an forever growing market - being able to visualise internally and publical
 SaaS applications could be an interesting way to see where you are heading and where you want to be.
 
 # Example Radar
-![alt text](https://i.imgur.com/XuQ7wkv.png "Example Radar")
+![Example Radar](https://github.com/vrklgn/saas-tech-radar/blob/main/saas-radar.jpg "Example Radar")
 
 ## Changed Concepts
 
