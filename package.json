@@ -1,9 +1,11 @@
 {
-  "name": "zalando-tech-radar",
-  "version": "2018.5.0",
-  "description": "Visualizing our technology choices",
-  "homepage": "https://github.com/zalando/tech-radar#readme",
-  "repository": "https://github.com/zalando/tech-radar.git",
+  "name": "saas-tech-radar",
+  "version": "2020.07.01",
+  "description": "Adaptation of ThoughtWorks Tech Radar for SaaS Applications and Productivity apps.",
+  "homepage": "https://github.com/vrklgn/saas-tech-radar#readme",
+  "repository": "https://github.com/vrklgn/saas-tech-radar.git",
+  "bugs":{ "url" : "https://github.com/vrklgn/saas-tech-radar/issues"
+, "email" : "vrklgn@gmail.com"
   "license": "MIT",
   "directories": {
     "doc": "docs"
