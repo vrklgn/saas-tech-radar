@@ -1,20 +1,12 @@
-# Background
+![Example Radar](https://github.com/vrklgn/saas-tech-radar/blob/main/saas-radar.jpg "Example Radar")
 
-[Zalando](http://zalando.de), maintains a [public Tech
-Radar](http://zalando.github.io/tech-radar/) to help their engineering teams
-align on technology choices. It is based on the [pioneering work
-by ThoughtWorks](https://www.thoughtworks.com/radar).
+# SaaS Tech Radar
 
-An thought I (vrklgn) had for some time is how this tech-radar could be used to also visualise
-internal work with SaaS applications and other productivity apps - From here on known as "Tools".
+Based on the [fantastic work by ThoughtWorks](https://www.thoughtworks.com/radar) and [forked from Zalandos Tech Radar](http://zalando.github.io/tech-radar/) the aim of the **SaaS Tech Radar** is to provide a equivilent framework for SaaS-powered workspaces. 
 
-This fork aims to create a framework for how to describe and talk about SaaS applications internally.
-
-It's an forever growing market - being able to visualise internally and publically how you think regarding 
+I's an ever growing market of SaaS applications - being able to visualise internally and publically how you think regarding 
 SaaS applications could be an interesting way to see where you are heading and where you want to be.
 
-# Example Radar
-![Example Radar](https://github.com/vrklgn/saas-tech-radar/blob/main/saas-radar.jpg "Example Radar")
 
 ## Changed Concepts
 
@@ -36,28 +28,9 @@ SaaS applications could be an interesting way to see where you are heading and w
 | Tools | Collaboration | Tools used to collaborate, most software will sit under this category. <br> **"Where do we work with each other?"**|
 | Languages & Frameworks | Communication | Tools used for communication between employees / customers <br> **"How do we communicate with each other?"** |
 
-## Usage
+## Usage (zalando/tech-radar)
 
-### zalando/tech-radar
-
-This repository contains the code to generate the visualization:
-[`radar.js`](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
-Feel free to use and adapt it for your own purposes.
-
-1. include `d3.js` and `radar.js`:
-
-```html
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="http://zalando.github.io/tech-radar/release/radar-0.5.js"></script>
-```
-
-2. insert an empty `svg` tag:
-
-```html
-<svg id="radar"></svg>
-```
-
-3. configure the radar visualization:
+### Editing the data
 
 ```js
 radar_visualization({
