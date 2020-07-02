@@ -4,9 +4,9 @@
   "description": "Adaptation of ThoughtWorks Tech Radar for SaaS Applications and Productivity apps.",
   "homepage": "https://github.com/vrklgn/saas-tech-radar#readme",
   "repository": "https://github.com/vrklgn/saas-tech-radar.git",
-  "bugs":{ "url" : "https://github.com/vrklgn/saas-tech-radar/issues"
-, "email" : "vrklgn@gmail.com",
-"license": "MIT",
+  "bugs":{ "url" : "https://github.com/vrklgn/saas-tech-radar/issues"},
+  "email" : "vrklgn@gmail.com",
+  "license": "MIT",
   "directories": {
     "doc": "docs"
   },
@@ -22,3 +22,4 @@
     "lint:html": "htmllint docs/*.html"
   }
 }
+
