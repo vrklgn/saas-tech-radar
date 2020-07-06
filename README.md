@@ -1,4 +1,4 @@
-![Example Radar](https://github.com/vrklgn/saas-tool-radar/blob/main/saastoolradar-logo.png "Example Radar")
+![Example Radar](https://github.com/vrklgn/saas-tool-radar/blob/main/saastoolradar-logo.png =200px "Example Radar")
 
 # SaaS Tool Radar
 
