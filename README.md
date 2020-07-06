@@ -14,8 +14,8 @@ SaaS applications could be an interesting way to see where you are heading and w
 | --- | --- | --- |
 | Adopt | Invest | Where we want to put development / research to make the environment even better (User Education, Initatives, New ways of working etc. |
 | Trial | Support | Tools that are part of the software stack that we support. |
-| Hold | Obsolete | Tools we want to move away from. |
-| Assess | Unsupported | Tool we have moved away from or decided against. |
+| Hold | Assess | Tools we see a lot of potential in and want to investigate further. |
+| Assess | Drop | Tool we weant to move away from or have decided against. |
 
 ### Quadrants
 
