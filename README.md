@@ -5,8 +5,9 @@ Based on the [fantastic work by ThoughtWorks](https://www.thoughtworks.com/radar
 I's an ever growing market of SaaS applications - being able to visualise internally and publically how you think regarding 
 SaaS applications could be an interesting way to see where you are heading and where you want to be.
 
+**[Check out the wiki for usage and more information](https://github.com/vrklgn/saas-tool-radar/wiki/)** 
 
-## Changed Concepts
+## Changed concepts on a glance
 
 ### Rings
 
@@ -14,8 +15,8 @@ SaaS applications could be an interesting way to see where you are heading and w
 | --- | --- | --- |
 | Adopt | Invest | Where we want to put development / research to make the environment even better (User Education, Initatives, New ways of working etc. |
 | Trial | Support | Tools that are part of the software stack that we support. |
-| Hold | Obsolete | Tools we want to move away from. |
-| Assess | Unsupported | Tool we have moved away from or decided against. |
+| Hold | Assess | Tools we see a lot of potential in and want to investigate further. |
+| Assess | Drop | Tool we weant to move away from or have decided against. |
 
 ### Quadrants
 
@@ -59,9 +60,8 @@ radar_visualization({
       label: "Some Entry",
       quadrant: 3,          // 0,1,2,3 (counting clockwise, starting from bottom right)
       ring: 2,              // 0,1,2,3 (starting from inside)
-      moved: -1             // -1 = moved out (triangle pointing down)
-                            //  0 = not moved (circle)
-                            //  1 = moved in  (triangle pointing up)
+      new: 1                //  0 = old tool (circle)
+                            //  1 = new tool (star)
    },
     // ...
   ]
