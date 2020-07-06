@@ -1,6 +1,4 @@
-![Example Radar](https://github.com/vrklgn/saas-tech-radar/blob/main/saas-radar.jpg "Example Radar")
-
-# SaaS Tool Radar
+<img src="https://github.com/vrklgn/saas-tool-radar/blob/main/saastoolradar-logo.png" width="700">
 
 Based on the [fantastic work by ThoughtWorks](https://www.thoughtworks.com/radar) and [forked from Zalandos Tech Radar](http://zalando.github.io/tech-radar/) the aim of the **SaaS Tool Radar** is to provide a equivilent framework for SaaS-powered workspaces. 
 
