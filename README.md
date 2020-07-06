@@ -1,8 +1,5 @@
 <img src="https://github.com/vrklgn/saas-tool-radar/blob/main/saastoolradar-logo.png" width="500">
 
-
-# SaaS Tool Radar
-
 Based on the [fantastic work by ThoughtWorks](https://www.thoughtworks.com/radar) and [forked from Zalandos Tech Radar](http://zalando.github.io/tech-radar/) the aim of the **SaaS Tool Radar** is to provide a equivilent framework for SaaS-powered workspaces. 
 
 I's an ever growing market of SaaS applications - being able to visualise internally and publically how you think regarding 
