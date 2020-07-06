@@ -1,25 +1,37 @@
 body {
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'Open-Sans', sans-serif;
   padding-bottom: 50px;
   background-color: #282a36;
   color: #f8f8f2;
+  line-height: 1.5;
 }
 
 a {
   color: #6272a4;
 }
-h3 {
+h2 {
   margin-top: 50px;
+  font-family: 'Quantico', sans-serif;
+  font-size:25px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Quantico', sans-serif;
+  text-transform: uppercase;
+  margin-top: 25px;
 }
 li {
   margin: 25px 50px 0 0;
 }
 table {
-  width: 1400px;
+  width: 1600px;
   margin: 0 50px 0 50px;
+  line-height: 1.4;
+  margin-bottom: 50px;
 }
 td {
-  width: 50%;
+  width: 25%;
   vertical-align: top;
   padding-right: 60px;
 }

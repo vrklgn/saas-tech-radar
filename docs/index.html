@@ -7,7 +7,7 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="radar.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Quantico:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="radar.css">
 </head>
 
@@ -18,14 +18,14 @@
 <script>
 radar_visualization({
   svg_id: "radar",
-  width: 1500,
+  width: 1600,
   height: 1000,
   colors: {
     background: "#282a36",
     grid: "#44475a",
     inactive: "#ddd"
   },
-  title: "IT SaaS Radar — 2020.06",
+  title: "SaaS Tool Radar — 2020.07",
   quadrants: [
     { name: "Platforms" },
     { name: "Compliance" },
@@ -35,198 +35,185 @@ radar_visualization({
   rings: [
     { name: "Invest", color: "#50fa7b" },
     { name: "Support", color: "#bd93f9" },
-    { name: "Obsolete", color: "#f1fa8c" },
-    { name: "Unsupported", color: "#ff5555" }
+    { name: "Assess", color: "#f1fa8c" },
+    { name: "Drop", color: "#ff5555" }
   ],
-  print_layout: true,
-  //zoomed_quadrant: 0,
+
   //ENTRIES
   entries: [
     {
-        "label": "Google Meet",
+        "label": "Google Hangouts Chat",
         "ring": 0,
         "quadrant": 3,
-        "moved": 1,
+        "new": 1,
     },
     {
-        "label": "Gmail",
+        "label": "Google Hangouts Chat",
         "ring": 1,
         "quadrant": 3,
-        "moved": 0
+        
     },
     {
-        "label": "Google Calendar",
-        "ring": 1,
-        "quadrant": 3,
-        "moved": 0
+        "label": "Google Hangouts Chat",
+        "ring": 2,
+        "quadrant": 2,
     },
     {
         "label": "Google Hangouts Chat",
         "ring": 3,
-        "quadrant": 3,
-        "moved": 0
+        "quadrant": 1,
+        
     },
     {
-        "label": "Google Currents",
-        "ring": 3,
-        "quadrant": 3,
-        "moved": -1
+        "label": "Google Hangouts Chat",
+        "ring": 0,
+        "quadrant": 0,
+        
     },
     {
-        "label": "Slack",
+        "label": "Google Hangouts Chat",
         "ring": 1,
         "quadrant": 3,
-        "moved": 0
+        
     },
     {
-        "label": "Zoom",
+        "label": "Google Hangouts Chat",
         "ring": 2,
-        "quadrant": 3,
-        "moved": 0
+        "quadrant": 2,
+        
     },
     {
-        "label": "Microsoft Teams",
-        "ring": 2,
-        "quadrant": 3,
-        "moved": 0
+        "label": "Google Hangouts Chat",
+        "ring": 3,
+        "quadrant": 1,
+        
     },
     {
         "label": "Google Docs",
-        "ring": 1,
-        "quadrant": 2,
-        "moved": 0
+        "ring": 0,
+        "quadrant": 0,
+        
     },
     {
         "label": "Microsoft Word",
         "ring": 1,
-        "quadrant": 2,
-        "moved": 0
+        "quadrant": 3,
+        
     },
     {
         "label": "Google Drive",
-        "ring": 1,
+        "ring": 2,
         "quadrant": 2,
-        "moved": 0
+        
     },
     {
-        "label": "Salesforce",
-        "ring": 0,
-        "quadrant": 2,
-        "moved": 1
+        "label": "Google Hangouts Chat",
+        "ring": 3,
+        "quadrant": 1,
+        
     },
     {
         "label": "Jira Software",
         "ring": 0,
-        "quadrant": 2,
-        "moved": 1
+        "quadrant": 0,
+        
     },
     {
         "label": "Adobe Creative Cloud",
         "ring": 1,
-        "quadrant": 2,
-        "moved": 0
+        "quadrant": 3,
+        
     },
     {
         "label": "Google Sheets",
-        "ring": 1,
-        "quadrant": 2,
-        "moved": 0
-    },
-    {
-        "label": "Trello",
         "ring": 2,
         "quadrant": 2,
-        "moved": -1
+        
+    },
+    {
+        "label": "Google Hangouts Chat",
+        "ring": 3,
+        "quadrant": 1,
+        
     },
     {
         "label": "Carbon Black Defense",
-        "ring": 1,
-        "quadrant": 1,
-        "moved": 0
+        "ring": 0,
+        "quadrant": 0,
+        
     },
     {
         "label": "Munki",
         "ring": 1,
-        "quadrant": 1,
-        "moved": 0
+        "quadrant": 3,
+        
     },
     {
-        "label": "osquery",
-        "ring": 0,
-        "quadrant": 1,
-        "moved": 1
+        "label": "Google Hangouts Chat",
+        "ring": 2,
+        "quadrant": 2,
+        
     },
     {
         "label": "1Password",
-        "ring": 1,
+        "ring": 3,
         "quadrant": 1,
-        "moved": 0
+        
     },
     {
         "label": "BetterCloud",
-        "ring": 0,
-        "quadrant": 1,
-        "moved": 1
+        "ring": 3,
+        "quadrant": 0,
+        
     },
     {
         "label": "Data Loss Prevention",
         "ring": 0,
-        "quadrant": 1,
-        "moved": 0
+        "quadrant": 3,
+        
     },
     {
         "label": "Context Aware Access",
-        "ring": 0,
+        "ring": 1,
+        "quadrant": 2,
+        
+    },
+    {
+        "label": "Google Hangouts Chat",
+        "ring": 2,
         "quadrant": 1,
-        "moved": 1
+        
     },
     {
-        "label": "MacOS",
-        "ring": 1,
-        "quadrant": 0,
-        "moved": 0
-    },
-    {
-        "label": "iOS",
-        "ring": 1,
-        "quadrant": 0,
-        "moved": 0
-    },
-    {
-        "label": "Android",
-        "ring": 1,
-        "quadrant": 0,
-        "moved": 0
-    },
-    {
-        "label": "Linux (Debian)",
-        "ring": 0,
-        "quadrant": 0,
-        "moved": 1
-    },
-    {
-        "label": "ChromeOS",
-        "ring": 1,
-        "quadrant": 0,
-        "moved": 0
-    },
-    {
-        "label": "Windows",
+        "label": "Google Hangouts Chat",
         "ring": 3,
         "quadrant": 0,
-        "moved": 0
+        
+    },
+    {
+        "label": "Google Hangouts Chat",
+        "ring": 0,
+        "quadrant": 3,
+        
+    },
+
+    {
+        "label": "Windows",
+        "ring": 1,
+        "quadrant": 2,
+        
     },
     {
         "label": "Linux (Other)",
         "ring": 2,
-        "quadrant": 0,
-        "moved": 0
+        "quadrant": 1,
+        
     },
     {
         "label": "Lastpass",
         "ring": 3,
-        "quadrant": 1,
-        "moved": -1
+        "quadrant": 0,
+        
     }
 ]
   //ENTRIES
@@ -236,37 +223,47 @@ radar_visualization({
 <table>
 <tr>
 <td>
+<h2>Invest</h2>
+<p>Tools we have high confidence in to serve our purpose, also in the future. We want to encourage usage of and want to develop and research further. Thinking about what initiatives we can do to enhance the experience.</p>
+</td>
+<td>
+<h2>Support</h2>
+<p>These tools are commonly used within the company for productivity. They provide the foundation of applications we use to collaborate. However, at the moment, these tools are not being developed on further.</p>
+</td>
+<td>
+<h2>Assess</h2>
+<p>Tools and ideas worth exploring further, we see great potential in these products. We want to evaluate how they would fit in our workspace.</p>
+</td>
+<td>
+<h2>Drop</h2>
+<p>Tools we want to move away from. We rather avoid new projects being started in the tool and want to limit the usage over time to finally decommission the product entirely. </p>
+</td>
+</tr>
+</table>
+<hr>
+<table style="width:800px">
+<tr>
+
+<td>
 
 <h3>What is the SaaS Tool Radar?</h3>
 
 <p>
-The SaaS Tool Radar is a list of technologies, complemented by an assessment result, called <em>ring assignment</em>. We use four rings with the following semantics:
+The SaaS Tool Radar is a tool to inspire and visualize our organization's tools for productivity. Based on the <a href="https://www.thoughtworks.com/radar">ThoughtWorks Tech Radar</a>, this radar sets out to establish a pulse of where we are heading and what tools we investing our time in.
 </p>
-
-<ul>
-<li><strong>INVEST</strong> &mdash; Tools we have high confidence in to serve our purpose, also in large scale. Tools we want to encourage usage of and want to develop and research further. Thinking about what initiatives we can do to enhance the experience.</li>
-<li><strong>SUPPORT</strong> &mdash; Tools commonly used within the company and have a high usage, however no further investments are being done at the moment but rather keeping the status quo.</li>
-<li><strong>OBSOLETE</strong> &mdash; Tools we want to move away from and not further invest in - current migration projects or alternatives are being investigated. The tool is not recommended to be used for new projects.</li>
-<li><strong>UNSUPPORTED</strong> &mdash; Tools that have been decomissioned, decided against or simply  is not a tool being supported.</li>
-</ul>
-
-</td><td>
-
-<h3>What is the purpose?</h3>
 
 <p>
-The SaaS Tool Radar is a tool to inspire and support teams to pick the best technologies for new projects. Based on the <a href="https://www.thoughtworks.com/radar">ThoughtWorks Tech Radar</a>, this radar sets out to find a pulse of where we are heading and what products we are investing our time in.
-ech-radar could be used to also visualise internal work with SaaS applications and other productivity apps - From here on known as "Tools".
+The goal is to create a framework for describing, visualizing, and talking about SaaS applications internally.
 
-This fork aims to create a framework for how to describe and talk about SaaS applications internally.
+It's a forever growing market of applications. Visualizing internally and publicly how you think regarding SaaS applications could be an exciting way to see where you are heading and where you want to be.
 
-It's an forever growing market - being able to visualise internally and publically how you think regarding SaaS applications could be an interesting way to see where you are heading and where you want to be.
-
-SaaS Radar is forked from <a href="https://github.com/zalando/tech-radar">Zalandos Tech Radar</a> from which efforts this radar would not have existed.
+SaaS Tool Radar is forked from <a href="https://github.com/zalando/tech-radar">Zalando's Tech Radar</a> from which efforts this radar would not have existed.
 </p>
 
-</td></tr>
+</td>
+</tr>
 </table>
+
 
 </body>
 </html>
