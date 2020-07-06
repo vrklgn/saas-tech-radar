@@ -1,10 +1,10 @@
 {
-  "name": "saas-tech-radar",
+  "name": "saas-tool-radar",
   "version": "2020.07.01",
   "description": "Adaptation of ThoughtWorks Tech Radar for SaaS Applications and Productivity apps.",
-  "homepage": "https://github.com/vrklgn/saas-tech-radar#readme",
-  "repository": "https://github.com/vrklgn/saas-tech-radar.git",
-  "bugs":{ "url" : "https://github.com/vrklgn/saas-tech-radar/issues"},
+  "homepage": "https://github.com/vrklgn/saas-tool-radar#readme",
+  "repository": "https://github.com/vrklgn/saas-tool-radar.git",
+  "bugs":{ "url" : "https://github.com/vrklgn/saas-tool-radar/issues"},
   "email" : "vrklgn@gmail.com",
   "license": "MIT",
   "directories": {
