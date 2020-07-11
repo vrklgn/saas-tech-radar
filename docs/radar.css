@@ -9,6 +9,15 @@ body {
 a {
   color: #6272a4;
 }
+
+h1 {
+  font-family: 'Quantico', sans-serif;
+  font-size:50px;
+  text-transform: uppercase;
+  margin: 0 50px 0 50px;
+  font-weight: bold;
+}
+
 h2 {
   margin-top: 50px;
   font-family: 'Quantico', sans-serif;

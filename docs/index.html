@@ -6,6 +6,9 @@
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="radar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Quantico:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="radar.css">
@@ -13,212 +16,38 @@
 
 <body>
 
+
+
+<p><h1>SaaS Tool Radar — 2020.07</h1>
+</p>
+
+<input id="selectfile" type="file"></input>
+<button onclick="myFunction()">Upload</button>
+
+  <script>
+  function myFunction() {
+     var x = document.getElementById("selectfile");
+     Papa.parse(x.files[0],
+         {header: true, complete: function(entries)
+         {
+             console.log("Parse results:", entries.data);
+             radar_visualization({
+
+               entries: [
+                 {
+                 "label": "Google Hangouts Chat",
+                 "ring": 0,
+                 "quadrant": 3,
+                 "new": 1
+               }
+             ]
+             })
+         }
+         })};
+
+  </script>
+
 <svg id="radar"></svg>
-
-<script>
-radar_visualization({
-  svg_id: "radar",
-  width: 1600,
-  height: 1000,
-  colors: {
-    background: "#282a36",
-    grid: "#44475a",
-    inactive: "#ddd"
-  },
-  title: "SaaS Tool Radar — 2020.07",
-  quadrants: [
-    { name: "Platforms" },
-    { name: "Compliance" },
-    { name: "Collaboration" },
-    { name: "Communication" }
-  ],
-  rings: [
-    { name: "Invest", color: "#50fa7b" },
-    { name: "Support", color: "#bd93f9" },
-    { name: "Assess", color: "#f1fa8c" },
-    { name: "Drop", color: "#ff5555" }
-  ],
-
-  //ENTRIES
-  entries: [
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 0,
-        "quadrant": 3,
-        "new": 1,
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 1,
-        "quadrant": 3,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 2,
-        "quadrant": 2,
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 3,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 0,
-        "quadrant": 0,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 1,
-        "quadrant": 3,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 2,
-        "quadrant": 2,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 3,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "Google Docs",
-        "ring": 0,
-        "quadrant": 0,
-        
-    },
-    {
-        "label": "Microsoft Word",
-        "ring": 1,
-        "quadrant": 3,
-        
-    },
-    {
-        "label": "Google Drive",
-        "ring": 2,
-        "quadrant": 2,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 3,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "Jira Software",
-        "ring": 0,
-        "quadrant": 0,
-        
-    },
-    {
-        "label": "Adobe Creative Cloud",
-        "ring": 1,
-        "quadrant": 3,
-        
-    },
-    {
-        "label": "Google Sheets",
-        "ring": 2,
-        "quadrant": 2,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 3,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "Carbon Black Defense",
-        "ring": 0,
-        "quadrant": 0,
-        
-    },
-    {
-        "label": "Munki",
-        "ring": 1,
-        "quadrant": 3,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 2,
-        "quadrant": 2,
-        
-    },
-    {
-        "label": "1Password",
-        "ring": 3,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "BetterCloud",
-        "ring": 3,
-        "quadrant": 0,
-        
-    },
-    {
-        "label": "Data Loss Prevention",
-        "ring": 0,
-        "quadrant": 3,
-        
-    },
-    {
-        "label": "Context Aware Access",
-        "ring": 1,
-        "quadrant": 2,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 2,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 3,
-        "quadrant": 0,
-        
-    },
-    {
-        "label": "Google Hangouts Chat",
-        "ring": 0,
-        "quadrant": 3,
-        
-    },
-
-    {
-        "label": "Windows",
-        "ring": 1,
-        "quadrant": 2,
-        
-    },
-    {
-        "label": "Linux (Other)",
-        "ring": 2,
-        "quadrant": 1,
-        
-    },
-    {
-        "label": "Lastpass",
-        "ring": 3,
-        "quadrant": 0,
-        
-    }
-]
-  //ENTRIES
-});
-</script>
 
 <table>
 <tr>
