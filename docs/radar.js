@@ -165,7 +165,7 @@ function radar_visualization(config) {
     var point = entry.segment.random();
     entry.x = point.x;
     entry.y = point.y;
-    entry.color = config.rings[entry.ring].color;
+    entry.color = ringlist[entry.ring].color;
   }
 
   // partition entries according to segments
@@ -253,7 +253,7 @@ function radar_visualization(config) {
       .style("stroke", "#ddd")
       .style("stroke-width", 3);
       grid.append("text")
-        .text(config.rings[i].name)
+        .text(ringlist[i].name)
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
         .style("fill", "#6272a4")

@@ -32,21 +32,22 @@
          {
              console.log("Parse results:", results.data);
          }
-         })};
+         })
 
-         function radar_visualization({
+       };
+</script>
 
-           entries: [
-             {
-             "label": "Google Hangouts Chat",
-             "ring": 0,
-             "quadrant": 3,
-             "new": 1
-           }
-         ]
-       });
-
-  </script>
+<script>
+radar_visualization({
+  entries: [
+    {
+      "label": "Lastpass",
+      "ring": 3,
+      "quadrant": 0,
+    }
+  ]
+});
+</script>
 
 <svg id="radar"></svg>
 
