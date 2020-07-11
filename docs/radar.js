@@ -48,20 +48,6 @@ function radar_visualization(config) {
     { radial_min: -0.5, radial_max: 0, factor_x: 1, factor_y: -1 }
   ];
 
-  const quadrantlist = [
-      { name: "Platforms" },
-      { name: "Compliance" },
-      { name: "Collaboration" },
-      { name: "Communication" }
-    ];
-
-  const ringlist = [
-      { name: "Invest", color: "#50fa7b" },
-      { name: "Support", color: "#bd93f9" },
-      { name: "Assess", color: "#f1fa8c" },
-      { name: "Drop", color: "#ff5555" }
-    ];
-
   const rings = [
     { radius: 100 },
     { radius: 180 },
@@ -165,7 +151,7 @@ function radar_visualization(config) {
     var point = entry.segment.random();
     entry.x = point.x;
     entry.y = point.y;
-    entry.color = ringlist[entry.ring].color;
+    entry.color = config.rings[entry.ring].color;
   }
 
   // partition entries according to segments
@@ -253,7 +239,7 @@ function radar_visualization(config) {
       .style("stroke", "#ddd")
       .style("stroke-width", 3);
       grid.append("text")
-        .text(ringlist[i].name)
+        .text(config.rings[i].name)
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
         .style("fill", "#6272a4")
@@ -298,7 +284,7 @@ function radar_visualization(config) {
           legend_offset[quadrant].x ,
           legend_offset[quadrant].y - 60
         ))
-        .text(quadrantlist[quadrant].name)
+        .text(config.quadrants[quadrant].name)
         .style("font-family", "Quantico, sans-serif")
         .style("font-size", "30")
         .style("fill", "#f8f8f2")
@@ -308,7 +294,7 @@ function radar_visualization(config) {
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
-          .text(ringlist[ring].name)
+          .text(config.rings[ring].name)
           .style("font-family", "Quantico, sans-serif")
           .style("font-size", "22")
           .style("font-weight", "bold")
