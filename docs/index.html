@@ -28,22 +28,23 @@
   function myFunction() {
      var x = document.getElementById("selectfile");
      Papa.parse(x.files[0],
-         {header: true, complete: function(entries)
+         {header: true, complete: function(results)
          {
-             console.log("Parse results:", entries.data);
-             radar_visualization({
-
-               entries: [
-                 {
-                 "label": "Google Hangouts Chat",
-                 "ring": 0,
-                 "quadrant": 3,
-                 "new": 1
-               }
-             ]
-             })
+             console.log("Parse results:", results.data);
          }
          })};
+
+         function radar_visualization({
+
+           entries: [
+             {
+             "label": "Google Hangouts Chat",
+             "ring": 0,
+             "quadrant": 3,
+             "new": 1
+           }
+         ]
+       });
 
   </script>
 
