@@ -26,3 +26,8 @@ SaaS applications could be an interesting way to see where you are heading and w
 | Platforms | Platforms | Operating Systems or "Platforms" where software can be run. <br> **"On what do we work?"**|
 | Tools | Collaboration | Tools used to collaborate, most software will sit under this category. <br> **"Where do we work with each other?"**|
 | Languages & Frameworks | Communication | Tools used for communication between employees / customers <br> **"How do we communicate with each other?"** |
+
+
+### CSV Setup
+| label | ring | quadrant | new |
+| --- | --- | --- | --- |
