@@ -7,10 +7,6 @@ SaaS applications could be an interesting way to see where you are heading and w
 
 **[Check out the wiki for usage and more information](https://github.com/vrklgn/saas-tool-radar/wiki/)** 
 
-## Setup
-
-install dependencies with yarn (or npm):
-yarn 
 
 ## Changed concepts on a glance
 
