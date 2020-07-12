@@ -21,11 +21,12 @@
 // THE SOFTWARE.
 
 
-
-function radar_visualization(config) {
+function radar_visualization(jsondata) {
 
   // custom random number generator, to make random sequence reproducible
   // source: https://stackoverflow.com/questions/521295
+
+
   var seed = 42;
   function random() {
     var x = Math.sin(seed++) * 10000;
@@ -40,6 +41,9 @@ function radar_visualization(config) {
     return min + (random() + random()) * 0.5 * (max - min);
   }
 
+
+  const width = [1600];
+  const height = [1000];
   // radial_min / radial_max are multiples of PI
   const quadrants = [
     { radial_min: 0, radial_max: 0.5, factor_x: 1, factor_y: 1 },
@@ -66,6 +70,35 @@ function radar_visualization(config) {
     { x: -740, y: 90 },
     { x: -740, y: -310 },
     { x: 450, y: -310 }
+  ];
+
+  const entriesdata = [
+    {
+        "label": "Google Hangouts Chat",
+        "ring": 0,
+        "quadrant": 3,
+        "new": 1,
+    },
+    {
+        "label": "Google Hangouts Chat",
+        "ring": 1,
+        "quadrant": 3,
+
+    },
+  ];
+
+  const quadrantsdata = [
+    { name: "Platforms" },
+    { name: "Compliance" },
+    { name: "Collaboration" },
+    { name: "Communication" }
+  ];
+
+  const ringsdata = [
+    { name: "Invest", color: "#50fa7b" },
+    { name: "Support", color: "#bd93f9" },
+    { name: "Assess", color: "#f1fa8c" },
+    { name: "Drop", color: "#ff5555" }
   ];
 
   function polar(cartesian) {
@@ -144,14 +177,14 @@ function radar_visualization(config) {
   }
 
   // position each entry randomly in its segment
-  for (var i = 0; i < config.entries.length; i++) {
-    var entry = config.entries[i];
+  for (var i = 0; i < jsondata.length; i++) {
+    var entry = jsondata[i];
     entry.segment = segment(entry.quadrant, entry.ring);
     entry.active = 1;
     var point = entry.segment.random();
     entry.x = point.x;
     entry.y = point.y;
-    entry.color = config.rings[entry.ring].color;
+    entry.color = ringsdata[entry.ring].color;
   }
 
   // partition entries according to segments
@@ -162,8 +195,8 @@ function radar_visualization(config) {
       segmented[quadrant][ring] = [];
     }
   }
-  for (var i=0; i<config.entries.length; i++) {
-    var entry = config.entries[i];
+  for (var i=0; i<jsondata.length; i++) {
+    var entry = jsondata[i];
     segmented[entry.quadrant][entry.ring].push(entry);
   }
 
@@ -191,15 +224,17 @@ function radar_visualization(config) {
       440
     ].join(" ");
   }
+// d3.select("svg#" + "radar").selectAll.remove();
+d3.select("svg#" + "radar").selectAll("g").remove()
 
   var svg = d3.select("svg#" + "radar")
     .style("background-color", "#282a36")
     .style("color", "#f8f8f2")
-    .attr("width", "1600")
-    .attr("height", "1000");
+    .attr("width", width)
+    .attr("height", height);
 
   var radar = svg.append("g");
-  radar.attr("transform", translate(800, 500));
+  radar.attr("transform", translate(width/2, height/2));
 
   var grid = radar.append("g");
 
@@ -212,7 +247,7 @@ function radar_visualization(config) {
   grid.append("line")
     .attr("x1", -360).attr("y1", 0)
     .attr("x2", 360).attr("y2", 0)
-    .style("stroke", "#ddd")
+    .style("stroke", "#44475a")
     .style("stroke-width", 3);
 
   // background color. Usage `.attr("filter", "url(#solid)")`
@@ -236,10 +271,10 @@ function radar_visualization(config) {
       .attr("cy", 0)
       .attr("r", rings[i].radius)
       .style("fill", "none")
-      .style("stroke", "#ddd")
+      .style("stroke", "#44475a")
       .style("stroke-width", 3);
       grid.append("text")
-        .text(config.rings[i].name)
+        .text(ringsdata[i].name)
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
         .style("fill", "#6272a4")
@@ -264,7 +299,6 @@ function radar_visualization(config) {
     );
   }
 
-
     // footer
     radar.append("text")
       .attr("transform", translate(footer_offset.x, footer_offset.y))
@@ -284,7 +318,7 @@ function radar_visualization(config) {
           legend_offset[quadrant].x ,
           legend_offset[quadrant].y - 60
         ))
-        .text(config.quadrants[quadrant].name)
+        .text(quadrantsdata[quadrant].name)
         .style("font-family", "Quantico, sans-serif")
         .style("font-size", "30")
         .style("fill", "#f8f8f2")
@@ -294,13 +328,14 @@ function radar_visualization(config) {
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
-          .text(config.rings[ring].name)
+          .text(ringsdata[ring].name)
           .style("font-family", "Quantico, sans-serif")
           .style("font-size", "22")
           .style("font-weight", "bold")
           .style("text-transform", "uppercase")
           .style("fill", "#f8f8f2");
 ;
+
         legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
           .enter()
@@ -344,6 +379,7 @@ function radar_visualization(config) {
     .style("fill", "#333");
 
   function showBubble(d) {
+    d3.select("#bubble text").remove
       var tooltip = d3.select("#bubble text")
         .text(d.label);
       var bbox = tooltip.node().getBBox();
@@ -379,7 +415,7 @@ function radar_visualization(config) {
 
   // draw blips on radar
   var blips = rink.selectAll(".blip")
-    .data(config.entries)
+    .data(jsondata)
     .enter()
       .append("g")
         .attr("class", "blip")
@@ -430,7 +466,7 @@ function radar_visualization(config) {
 
   // distribute blips, while avoiding collisions
   d3.forceSimulation()
-    .nodes(config.entries)
+    .nodes(jsondata)
     .velocityDecay(0.19) // magic number (found by experimentation)
     .force("collision", d3.forceCollide().radius(12).strength(0.85))
     .on("tick", ticked);
