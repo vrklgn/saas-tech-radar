@@ -6,9 +6,43 @@ body {
   line-height: 1.5;
 }
 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 50px 0 50px;
+}
+
+.btn {
+  border: 2px 6272a4;
+  color: gray;
+  background-color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
 a {
   color: #6272a4;
 }
+
+h1 {
+  font-family: 'Quantico', sans-serif;
+  font-size:50px;
+  text-transform: uppercase;
+  margin: 0 50px 0 50px;
+  font-weight: bold;
+}
+
 h2 {
   margin-top: 50px;
   font-family: 'Quantico', sans-serif;
