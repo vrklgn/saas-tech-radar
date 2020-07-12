@@ -29,5 +29,23 @@ SaaS applications could be an interesting way to see where you are heading and w
 
 
 ### CSV Setup
-| label | ring | quadrant | new |
-| --- | --- | --- | --- |
+label,ring,quadrant,new
+
+* Label
+Name of the Tool
+
+* Ring
+0 - Invest
+1 - Support
+2 - Assess
+3 - Drop
+
+* Quadrant
+0 - Platforms
+1 - Compliance
+2 - Collaboration
+3 - Communication
+
+* New
+0 - Regular Dot
+1 - Star (New)
