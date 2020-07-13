@@ -1,35 +1,4 @@
-body {
-  font-family: 'Open-Sans', sans-serif;
-  padding-bottom: 50px;
-  background-color: #282a36;
-  color: #f8f8f2;
-  line-height: 1.5;
-}
 
-.upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  margin: 0 50px 0 50px;
-}
-
-.btn {
-  border: 2px 6272a4;
-  color: gray;
-  background-color: white;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
 
 a {
   color: #6272a4;
@@ -68,4 +37,47 @@ td {
   width: 25%;
   vertical-align: top;
   padding-right: 60px;
+}
+
+body {
+  font-family: 'Open-Sans', sans-serif;
+  padding-bottom: 50px;
+  background-color: #282a36;
+  color: #f8f8f2;
+  line-height: 1.5;
+}
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Quantico', sans-serif;
+  text-transform: uppercase;
+	font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  margin: 0 0px 0 50px;
+  }
+
+  [type="file"]:focus + label,
+  [type="file"] + label:hover {
+      background-color: rgba(241, 93, 34, 0.8);
+  }
+
+  [type="file"]:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
 }

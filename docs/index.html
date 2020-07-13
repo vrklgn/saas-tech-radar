@@ -22,10 +22,8 @@
 
 <p>
   <h1>SaaS Tool Radar — 2020.07</h1>
-  <div class="upload-btn-wrapper">
-  <button class="btn">Select CSV</button>
-  <input id="csvfile" type="file" name="myfile" onchange="parsecsv()" accept=".csv"/>
-  </div>
+<input type="file" onchange="parsecsv()" accept=".csv" id="file" />
+<label for="file" class="btn">select csv</label>
 </p>
 
 <div>
@@ -46,7 +44,7 @@ radar_visualization(
 );
 
 function parsecsv(){
-  var x = document.getElementById("csvfile");
+  var x = document.getElementById("file");
   Papa.parse(x.files[0],
       {header: true, dynamicTyping: true, skipEmptyLines: true, complete: function(results)
       {
