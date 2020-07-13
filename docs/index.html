@@ -10,24 +10,47 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="radar.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Quantico:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="radar.css">
 
 </head>
-
 <body>
 
-
-
-<p>
-  <h1>SaaS Tool Radar — 2020.07</h1>
+  <div class=header>
+  <h1>SaaS Tool Radar</h1>
 <input type="file" onchange="parsecsv()" accept=".csv" id="file" />
-<label for="file" class="btn">select csv</label>
-</p>
+<label for="file" class="btn">Load .csv</label>
+</div>
 
-<div>
+<div class=radar-container>
+<p>
+<div class=svg-container>
 <svg id="radar"></svg>
+</div>
+</p>
+</div>
+<div class=radar-container>
+<p>
+<div class=grid-container>
+  <div class=grid-column>
+    <h2>Invest</h2>
+    <p>Tools we have high confidence in to serve our purpose, also in the future. We want to encourage usage of and want to develop and research further. Thinking about what initiatives we can do to enhance the experience.</p>
+  </div>
+  <div class=grid-column>
+    <h2>Support</h2>
+    <p>These tools are commonly used within the company for productivity. They provide the foundation of applications we use to collaborate. However, at the moment, these tools are not being developed on further.</p>
+  </div>
+  <div class=grid-column>
+    <h2>Assess</h2>
+    <p>Tools and ideas worth exploring further, we see great potential in these products. We want to evaluate how they would fit in our workspace.</p>
+  </div>
+  <div class=grid-column>
+    <h2>Drop</h2>
+    <p>Tools we want to move away from. We rather avoid new projects being started in the tool and want to limit the usage over time to finally decommission the product entirely.</p>
+  </div>
+</div>
+</p>
 </div>
 
 <script>
@@ -55,33 +78,9 @@ function parsecsv(){
     };
 </script>
 
-<table>
-<tr>
-<td>
-<h2>Invest</h2>
-<p>Tools we have high confidence in to serve our purpose, also in the future. We want to encourage usage of and want to develop and research further. Thinking about what initiatives we can do to enhance the experience.</p>
-</td>
-<td>
-<h2>Support</h2>
-<p>These tools are commonly used within the company for productivity. They provide the foundation of applications we use to collaborate. However, at the moment, these tools are not being developed on further.</p>
-</td>
-<td>
-<h2>Assess</h2>
-<p>Tools and ideas worth exploring further, we see great potential in these products. We want to evaluate how they would fit in our workspace.</p>
-</td>
-<td>
-<h2>Drop</h2>
-<p>Tools we want to move away from. We rather avoid new projects being started in the tool and want to limit the usage over time to finally decommission the product entirely. </p>
-</td>
-</tr>
-</table>
-<hr>
-<table style="width:800px">
-<tr>
-
-<td>
-
-<h3>What is the SaaS Tool Radar?</h3>
+<div class="footer">
+  <div class="footer-content">
+<h2>What is the SaaS Tool Radar?</h2>
 
 <p>
 The SaaS Tool Radar is a tool to inspire and visualize our organization's tools for productivity. Based on the <a href="https://www.thoughtworks.com/radar">ThoughtWorks Tech Radar</a>, this radar sets out to establish a pulse of where we are heading and what tools we investing our time in.
@@ -95,8 +94,11 @@ It's a forever growing market of applications. Visualizing internally and public
 SaaS Tool Radar is forked from <a href="https://github.com/zalando/tech-radar">Zalando's Tech Radar</a> from which efforts this radar would not have existed.
 </p>
 
-</td>
-</tr>
-</table>
+<p>
+<a href="https://github.com/vrklgn/saas-tool-radar">Github Repo</a>
+</p>
+</div>
+</div>
+
 </body>
 </html>

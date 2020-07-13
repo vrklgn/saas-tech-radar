@@ -95,10 +95,10 @@ function radar_visualization(jsondata) {
   ];
 
   const ringsdata = [
-    { name: "Invest", color: "#50fa7b" },
-    { name: "Support", color: "#bd93f9" },
-    { name: "Assess", color: "#f1fa8c" },
-    { name: "Drop", color: "#ff5555" }
+    { name: "Invest", color: "#F28066" },
+    { name: "Support", color: "#AEDB50" },
+    { name: "Assess", color: "#F3E302" },
+    { name: "Drop", color: "#A458A6" }
   ];
 
   function polar(cartesian) {
@@ -228,8 +228,8 @@ function radar_visualization(jsondata) {
 d3.select("svg#" + "radar").selectAll("g").remove()
 
   var svg = d3.select("svg#" + "radar")
-    .style("background-color", "#282a36")
-    .style("color", "#f8f8f2")
+    .style("background-color", "#FFF")
+    .style("color", "#474747")
     .attr("width", width)
     .attr("height", height);
 
@@ -242,13 +242,13 @@ d3.select("svg#" + "radar").selectAll("g").remove()
   grid.append("line")
     .attr("x1", 0).attr("y1", -360)
     .attr("x2", 0).attr("y2", 360)
-    .style("stroke", "#44475a")
-    .style("stroke-width", 3);
+    .style("stroke", "#d5d5d5")
+    .style("stroke-width", 4);
   grid.append("line")
     .attr("x1", -360).attr("y1", 0)
     .attr("x2", 360).attr("y2", 0)
-    .style("stroke", "#44475a")
-    .style("stroke-width", 3);
+    .style("stroke", "#d5d5d5")
+    .style("stroke-width", 4);
 
   // background color. Usage `.attr("filter", "url(#solid)")`
   // SOURCE: https://stackoverflow.com/a/31013492/2609980
@@ -271,17 +271,17 @@ d3.select("svg#" + "radar").selectAll("g").remove()
       .attr("cy", 0)
       .attr("r", rings[i].radius)
       .style("fill", "none")
-      .style("stroke", "#44475a")
-      .style("stroke-width", 3);
+      .style("stroke", "#d5d5d5")
+      .style("stroke-width", 4);
       grid.append("text")
         .text(ringsdata[i].name)
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
-        .style("fill", "#6272a4")
-        .style("font-family", "Quantico, sans-serif")
+        .style("fill", "#474747")
+        .style("font-family", "Dosis, sans-serif")
         .style("text-transform", "uppercase")
+        .style("font-size", 27)
         .style("font-weight", "bold")
-        .style("font-size", 30)
         .style("pointer-events", "none")
         .style("user-select", "none");
     }
@@ -302,11 +302,12 @@ d3.select("svg#" + "radar").selectAll("g").remove()
     // footer
     radar.append("text")
       .attr("transform", translate(footer_offset.x, footer_offset.y))
-      .text("★ New Initiative     ⬤ Tool")
+      .text("★ New Initiative     ● Tool")
       .attr("xml:space", "preserve")
-      .style("font-family", "Open Sans, sans-serif")
-      .style("fill", "#f8f8f2")
+      .style("font-family", "Dosis, sans-serif")
+      .style("fill", "#474747")
       .style("font-weight", "bold")
+      .style("text-transform", "uppercase")
       .style("font-size", "20");
 
 
@@ -319,21 +320,20 @@ d3.select("svg#" + "radar").selectAll("g").remove()
           legend_offset[quadrant].y - 60
         ))
         .text(quadrantsdata[quadrant].name)
-        .style("font-family", "Quantico, sans-serif")
+        .style("font-family", "Dosis, sans-serif")
         .style("font-size", "30")
-        .style("fill", "#f8f8f2")
+        .style("fill", "#474747")
         .style("text-transform", "uppercase")
         .style("font-weight", "bold")
-        .style("text-decoration", "underline");
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
           .text(ringsdata[ring].name)
-          .style("font-family", "Quantico, sans-serif")
+          .style("font-family", "Dosis, sans-serif")
           .style("font-size", "22")
           .style("font-weight", "bold")
           .style("text-transform", "uppercase")
-          .style("fill", "#f8f8f2");
+          .style("fill", "#474747");
 ;
 
         legend.selectAll(".legend" + quadrant + ring)
@@ -347,7 +347,7 @@ d3.select("svg#" + "radar").selectAll("g").remove()
               .text(function(d, i) { return d.id + ". " + d.label; })
               .style("font-family", "Open Sans, sans-serif")
               .style("font-size", "13")
-              .style("fill", "#f8f8f2")
+              .style("fill", "#474747")
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
               .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); });
       }
@@ -369,14 +369,14 @@ d3.select("svg#" + "radar").selectAll("g").remove()
   bubble.append("rect")
     .attr("rx", 4)
     .attr("ry", 4)
-    .style("fill", "#333");
+    .style("fill", "#acacac");
   bubble.append("text")
-    .style("font-family", "Open Sans, sans-serif")
+    .style("font-family", "Roboto, sans-serif")
     .style("font-size", "8px")
     .style("fill", "#fff");
   bubble.append("path")
     .attr("d", "M 0,0 10,0 5,8 z")
-    .style("fill", "#333");
+    .style("fill", "#acacac");
 
   function showBubble(d) {
     d3.select("#bubble text").remove
@@ -403,14 +403,13 @@ d3.select("svg#" + "radar").selectAll("g").remove()
 
   function highlightLegendItem(d) {
     var legendItem = document.getElementById("legendItem" + d.id);
-    legendItem.setAttribute("filter", "url(#solid)");
-    legendItem.setAttribute("fill", "white");
+    legendItem.setAttribute("font-weight", "bold");
+    legendItem.setAttribute("cursor", "default");
   }
 
   function unhighlightLegendItem(d) {
     var legendItem = document.getElementById("legendItem" + d.id);
-    legendItem.removeAttribute("filter");
-    legendItem.removeAttribute("fill");
+    legendItem.removeAttribute("font-weight");
   }
 
   // draw blips on radar
