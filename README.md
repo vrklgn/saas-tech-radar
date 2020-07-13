@@ -54,29 +54,29 @@ Tools used for communication between employees / customers <br> **"How do we com
 
 Tools fulfilling a ISO-certification or managing of platforms. <br> **"How do we ensure that our work stays Secure?"**
 
-### CSV Setup
+## CSV Setup
 
-#### Example
+### Example
 ```
 label,ring,quadrant,new
 Zoom,1,3,1
 ```
 
-##### Label
+#### Label
 Name of the Tool
 
-##### Ring
+#### Ring
  * 0: Invest
  * 1: Support
  * 2: Assess
  * 3: Drop
 
-##### Quadrant
+#### Quadrant
  * 0: Platforms
  * 1: Compliance
  * 2: Collaboration
  * 3: Communication
 
-##### New
+#### New
  * 0: Regular Blip (Old)
  * 1: Star (New)
