@@ -5,7 +5,9 @@ Based on the [fantastic work by ThoughtWorks](https://www.thoughtworks.com/radar
 I's an ever growing market of SaaS applications - being able to visualise internally and publically how you think regarding 
 SaaS applications could be an interesting way to see where you are heading and where you want to be.
 
-**[Check out the wiki for usage and more information](https://github.com/vrklgn/saas-tool-radar/wiki/)** 
+**[Check out the wiki for usage and more information](https://github.com/vrklgn/saas-tool-radar/wiki/)**
+
+**[Get started now - vrklgn.github.io](vrklgn.github.io)** 
 
 
 ## Changed concepts
