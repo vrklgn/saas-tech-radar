@@ -230,8 +230,9 @@ d3.select("svg#" + "radar").selectAll("g").remove()
   var svg = d3.select("svg#" + "radar")
     .style("background-color", "#FFF")
     .style("color", "#474747")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 1600 1000")
+    .classed("svg-content", true);
 
   var radar = svg.append("g");
   radar.attr("transform", translate(width/2, height/2));
