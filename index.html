@@ -16,7 +16,6 @@
 
 </head>
 <body>
-
   <div class=header>
   <h1>SaaS Tool Radar</h1>
 <input type="file" onchange="parsecsv()" accept=".csv" id="file" />
@@ -24,14 +23,11 @@
 </div>
 
 <div class=radar-container>
-<p>
-<div class=svg-container>
-<svg id="radar"></svg>
-</div>
-</p>
+  <div id="container" class="svg-container">
+  <svg id="radar"></svg>
+  </div>
 </div>
 <div class=radar-container>
-<p>
 <div class=grid-container>
   <div class=grid-column>
     <h2>Invest</h2>
@@ -50,7 +46,6 @@
     <p>Tools we want to move away from. We rather avoid new projects being started in the tool and want to limit the usage over time to finally decommission the product entirely.</p>
   </div>
 </div>
-</p>
 </div>
 
 <script>

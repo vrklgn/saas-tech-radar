@@ -44,7 +44,7 @@ td {
 body {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 50px;
-  background-color: #383e56;
+  background-color: #FFF;
   color: #474747;
   line-height: 1.5;
   font-weight: 400;
@@ -66,7 +66,6 @@ text-align: center;
 }
 
 div.radar-container {
-background-color: #FFF;
 border: 0;
 padding-bottom: 20px;
 align-items: center;
@@ -74,7 +73,8 @@ display: flex;
 margin: 0;
 text-align: center;
 justify-content: center;
-flex: 0 0 1600px;
+flex: 1 0 1600px;
+flex-direction: row;
 }
 
 div.grid-container{
@@ -82,17 +82,27 @@ div.grid-container{
   text-align: center;
   justify-content: center;
   flex: 0 0 1600px;
-  background-color: #FFF;
 }
 
 div.grid-column{
-  width: 22%;
-}
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  padding: 10px;
 
-div.svg-container {
-  text-align: center;
-  justify-content: center;
-  flex: 0 0 1600px;
+}
+.svg-container {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    align-content: center;
+    text-align: center;
+}
+.svg-content {
+    position: relative;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
 }
 div.footer {
 background-color: #383e56;
