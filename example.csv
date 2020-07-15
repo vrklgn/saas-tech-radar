@@ -1,33 +1,35 @@
-label,ring,quadrant,new
-askSpoke,2,2,1
-Trello,2,2,0
-Google Drive & Docs,0,2,0
-Jira Software,1,2,0
-Notion,3,2,0
-Slack,1,3,0
-Zoom,0,3,0
-Google Meet,3,3,0
-Microsoft Teams,2,3,1
-Hangouts Chat,1,3,0
-1Password,1,1,0
-BetterCloud,0,1,0
-Intello,3,1,1
-Jamf Pro,1,1,0
-Envoy,1,1,0
-Lastpass,2,1,0
-Kolide K2,0,1,1
-Torii,2,1,1
-ESET,2,1,0
-Crowdstrike,2,1,0
-Sophos,1,1,0
-macOS,1,0,0
-Windows 10,1,0,0
-iOS,1,0,1
-Android,2,0,0
-Linux (Debian),3,0,0
-Linux (Arch),0,0,0
+label,ring,quadrant,new,trend
+askSpoke,2,2,1,0
+Trello,2,2,0,0
+Google Drive & Docs,0,2,0,0
+Jira Software,1,2,0,0
+Notion,3,2,0,1
+Slack,1,3,0,0
+Zoom,0,3,0,0
+Google Meet,3,3,0,1
+Microsoft Teams,2,3,1,1
+Hangouts Chat,1,3,0,0
+1Password,1,1,0,0
+BetterCloud,0,1,0,0
+Intello,3,1,1,0
+Jamf Pro,1,1,0,0
+Envoy,1,1,0,0
+Lastpass,2,1,0,0
+Kolide K2,0,1,1,0
+Torii,2,1,1,-1
+ESET,2,1,0,0
+Crowdstrike,2,1,0,1
+Sophos,1,1,0,0
+macOS,1,0,0,0
+Windows 10,1,0,0,-1
+iOS,1,0,1,1
+Android,2,0,0,0
+Linux (Debian),3,0,0,0
+Linux (Arch),0,0,0,0
+#
 # DEMO FILE FOR SAAS TOOL RADAR
 # label: name of product
 # ring: 0: Invest, 1: Support, 2: Support, 3:Drop
 # quadrant: 0: Platforms, 1:Compliance, 2: Collaboration, 3:Communication
 # new: 0: Tool, 1: New Initative
+# trend: -1: Negative, 0: Neutral, 1: Positive

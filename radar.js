@@ -335,25 +335,31 @@ d3.select("svg#" + "radar").selectAll("g").remove()
           .style("font-weight", "bold")
           .style("text-transform", "uppercase")
           .style("fill", "#474747");
-;
-
-        legend.selectAll(".legend" + quadrant + ring)
+          legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
           .enter()
-            .append("text")
-            .attr("dominant-baseline","middle")
-              .attr("transform", function(d, i) { return legend_transform(quadrant, ring, i); })
-              .attr("class", "legend" + quadrant + ring)
-              .attr("id", function(d, i) { return "legendItem" + d.id; })
-              .text(function(d, i) { return d.id + ". " + d.label; })
-              .style("font-family", "Open Sans, sans-serif")
-              .style("font-size", "13")
-              .style("fill", "#474747")
-              .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
-              .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); });
-      }
-    }
+          .append("text")
+          .attr("dominant-baseline","middle")
+          .attr("transform", function(d, i) { return legend_transform(quadrant, ring, i); })
+          .attr("class", "legend" + quadrant + ring)
+          .attr("id", function(d, i) { return "legendItem" + d.id; })
+          .append("tspan")
+          .text(function(d, i) { return d.id + ". " + d.label + " ";})
+          .style("font-family", "Open Sans, sans-serif")
+          .style("font-size", "13")
+          .style("fill", "#474747")
+          .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
+          .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); })
+          .append("tspan")
+          .text(function(d, i) {return (d.trend == 1) ? "▲"  : (d.trend == -1) ? "▼" : "-" ;})
+          .style("fill", function(d, i) {return (d.trend == 1) ? "green"  : (d.trend == -1) ? "red" : "black" ;})
+          .style("font-size", "8px")
+          ;
 
+
+              // + " "
+}
+}
 
   // layer for entries
   var rink = radar.append("g")
