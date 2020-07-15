@@ -73,7 +73,7 @@ display: flex;
 margin: 0;
 text-align: center;
 justify-content: center;
-flex: 1 0 1600px;
+flex: 1 0 800px;
 flex-direction: row;
 }
 
@@ -81,20 +81,18 @@ div.grid-container{
   display:flex;
   text-align: center;
   justify-content: center;
-  flex: 0 0 1600px;
 }
 
 div.grid-column{
   width: 20%;
   background-color: rgb(255, 255, 255);
-  margin: 20px;
   padding: 10px;
 
 }
 .svg-container {
     position: relative;
-    width: 70%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
     align-content: center;
     text-align: center;
 }
