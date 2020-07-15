@@ -60,8 +60,8 @@ Tools fulfilling a ISO-certification or managing of platforms. <br> **"How do we
 
 ### Example
 ```
-label,ring,quadrant,new
-Zoom,1,3,1
+label,ring,quadrant,new,trend
+Zoom,1,3,1,-1
 ```
 
 #### Label
@@ -82,3 +82,8 @@ Name of the Tool
 #### New
  * 0: Regular Blip (Old)
  * 1: Star (New)
+ 
+ #### Trend
+ * 1: Positive Trend
+ * 0: Neutral Trend
+ * -1: Negative Trend
