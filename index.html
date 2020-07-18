@@ -47,6 +47,11 @@
   </div>
 </div>
 </div>
+<div class=radar-container>
+  <div class=dl-buttons>
+  <br/>  <button type="button" class="button">download png</button>
+  </div>
+</div>
 
 <script>
 
@@ -79,6 +84,27 @@ function parsecsv(){
       }
       })
     };
+</script>
+<div id="crowbar-workspace"></div>
+
+<script type="text/javascript" src="svg-crowbar-export.js"></script>
+
+<script>
+    d3.select("button").on("click", download_png)
+    function download_png () {
+
+      var svg_el = d3.select("svg")
+          .attr("version", 1.1)
+          .attr("xmlns", "http://www.w3.org/2000/svg")
+          .node();
+
+      svg_crowbar(d3.select("#radar").node(), {
+          filename: "tool-radar.png",
+          width: 1600,
+          height: 1000,
+          crowbar_el: d3.select("#crowbar-workspace").node(),
+      })
+    }
 </script>
 
 <div class="footer">
