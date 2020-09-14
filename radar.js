@@ -177,6 +177,7 @@ function radar_visualization(jsondata) {
   }
 
   // position each entry randomly in its segment
+
   for (var i = 0; i < jsondata.length; i++) {
     var entry = jsondata[i];
     entry.segment = segment(entry.quadrant, entry.ring);
@@ -435,17 +436,11 @@ d3.select("svg#" + "radar").selectAll("g").remove()
 
 
     // blip shape
-    if (d.new > 0) {
-      blip.append("path")
-      .attr("d", "M 0.000 20.000 L 23.511 32.361 L 19.021 6.180 L 38.042 -12.361 L 11.756 -16.180 L 0.000 -40.000 L -11.756 -16.180 L -38.042 -12.361 L -19.021 6.180 L -23.511 32.361 L 0.000 20.000")
-       .attr("transform", "scale(0.35)")
-        .attr("dominant-baseline","middle")
-        .style("fill", d.color);
-    }else {
       blip.append("circle")
-        .attr("r", 9)
-        .attr("fill", d.color);
-    }
+        .attr("r", 10 * (d.value >= 3 ? 3 : d.value >= 2 ? 2 : d.value >= 1 ? 1 : 1))
+        .attr("fill", d.color)
+        .attr("fill-opacity", 0.8);
+
 
     // blip text
 
@@ -473,7 +468,7 @@ d3.select("svg#" + "radar").selectAll("g").remove()
   // distribute blips, while avoiding collisions
   d3.forceSimulation()
     .nodes(jsondata)
-    .velocityDecay(0.19) // magic number (found by experimentation)
-    .force("collision", d3.forceCollide().radius(12).strength(0.85))
+    .velocityDecay(0.10) // magic number (found by experimentation)
+    .force("collision", d3.forceCollide().radius(28).strength(0.85))
     .on("tick", ticked);
 }
